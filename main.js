@@ -1,3 +1,4 @@
+var toDoList = document.getElementById("toDoList");
 const enterElement = document.getElementById("enterItemElement");
 var maxToDoLength = 10;
 
