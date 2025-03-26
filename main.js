@@ -5,13 +5,12 @@ var maxToDoLength = 10;
 const enterBox = document.getElementById("createTaskButton");
 
 
-enterBox.oninput = function() {
+enterBox.onclick = function() {
   const enterTask = document.getElementById("newTaskText");
 
   const newListElement = document.createElement("li");
   const newCheckBox = document.createElement("input");
   newCheckBox.type = "checkbox";
-  newListElement.appendChild(newCheckBox);
 
   const taskTextNode = document.createTextNode(" " + enterTask.value.trim());
 
