@@ -18,5 +18,6 @@ enterBox.onclick = function() {
   newListElement.appendChild(taskTextNode);
 
   toDoList.appendChild(newListElement);
-   
+
+  enterBox.value = false;
 }
