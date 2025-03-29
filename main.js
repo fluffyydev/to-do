@@ -1,23 +1,25 @@
-var toDoList = document.getElementById("toDoList");
-const enterElement = document.getElementById("enterItemElement");
-var maxToDoLength = 10;
+var toDoList = document.getElementById('toDoList');
+var enterElement = document.getElementById('enterItemElement');
+//var maxToDoLength = 10;
 
-const enterBox = document.getElementById("createTaskButton");
+var enterBox = document.getElementById('createTaskButton');
 
+enterBox.onchange = function() {
+  if (enterBox.checked == true) {
 
-enterBox.onclick = function() {
-  const enterTask = document.getElementById("newTaskText");
+    enterBox.checked = false;
+    const enterTask = document.getElementById('newTaskText');
+    if (enterTask.value != "") {
+      const newListElement = document.createElement('li');
+      const taskTextNode = document.createTextNode(" " + enterTask.value.trim());
+      const newCheckbox = document.createElement("input");
+      newCheckbox.type = "checkbox"
 
-  const newListElement = document.createElement("li");
-  const newCheckBox = document.createElement("input");
-  newCheckBox.type = "checkbox";
+      newListElement.appendChild(newCheckbox);
+      newListElement.appendChild(taskTextNode);
+      toDoList.insertBefore(newListElement, enterElement);
 
-  const taskTextNode = document.createTextNode(" " + enterTask.value.trim());
-
-  newListElement.appendChild(newCheckBox);
-  newListElement.appendChild(taskTextNode);
-
-  toDoList.appendChild(newListElement);
-
-  enterBox.value = false;
+      enterTask.value = ""
+    }
+  }
 }
