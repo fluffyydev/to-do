@@ -8,3 +8,4 @@ A easy to use To-Do list website, will be uploading to my site soon.
 - Make bullet points not square (thats not completely a bullet)
 - Make elements larger (i guess just make text larger)
 - Make the input look better and less  confusing
+- Center the to-do list
